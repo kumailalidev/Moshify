@@ -1,3 +1,4 @@
+/* Using mobile first approach */
 /* Defining color palette variables using pseudo class selector 'root' */
 :root {
   --color-primary: #2584ff;
@@ -5,4 +6,55 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+}
+
+html {
+  /* 62.5% of 16px = 10px: By default font-size of html element is 16px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5; /* 1.5 * current font-size */
+  color: var(--color-body);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem; /* Inter font already have some margin below and top of characters */
+}
+
+h1 {
+  font-size: 7rem; /* 1rem = 10px i.e. 62.5% of 16px (font size of html element)*/
+}
+
+h2 {
+  font-size: 4rem; /* 1rem = 10px i.e. 62.5% of 16px (font size of html element)*/
+}
+
+h3 {
+  font-size: 3rem; /* 1rem = 10px i.e. 62.5% of 16px (font size of html element)*/
+}
+
+p {
+  margin-top: 0; /* let the heading decide the margin above the paragraph */
+}
+
+/* media query of screens larger than 1024px */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
 }
