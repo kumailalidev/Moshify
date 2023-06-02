@@ -8,6 +8,7 @@
   --color-body: #918ca4;
 }
 
+/* Topography */
 html {
   /* 62.5% of 16px = 10px: By default font-size of html element is 16px */
   font-size: 62.5%;
@@ -56,5 +57,37 @@ p {
   }
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem; /* 20px */
+  font-weight: bold;
+}
+
+/* adding content dynamically using 'after' pseudo class */
+.link-arrow::after {
+  content: "-->"; /* TODO: comeback and replace with icon */
+  margin-left: 5px;
+  transition: margin 0.15s; /* margin should change in 0.15 seconds */
+}
+
+/* on hover, targeting content that is added dynamically */
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+/* media query for links component  */
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
