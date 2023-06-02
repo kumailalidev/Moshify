@@ -103,7 +103,12 @@ a {
   white-space: nowrap; /* whatever appears inside will be on the same line. */
 }
 
-/* using BEM (Block, Element, Modifier naming convention) */
+/* 
+  variations of badges
+  using OOP # 2 i.e. separate structure from skin
+  using BEM (Block, Element, Modifier naming convention)
+    - separate element and modifier using --.
+*/
 .badge--primary {
   background: var(--color-primary);
   color: white;
@@ -126,5 +131,40 @@ a {
 
   .badge--small {
     font-size: 1.2rem;
+  }
+}
+
+/* List */
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-headings);
+}
+
+/* 
+  variations of list
+  using OOP # 2 i.e. separate structure from skin
+  using BEM (Block, Element, Modifier naming convention)
+    - separating block from its elements by using __
+*/
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem; /* by default tick image is off the screen (TODO: take a look why?) */
+}
+
+/* using nesting (more specific) */
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
   }
 }
