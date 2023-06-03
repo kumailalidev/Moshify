@@ -267,3 +267,24 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* Inputs */
+.input {
+  padding: 1.5rem 3.5rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: 0; /* By default web browsers add outline for accessibility purpose */
+  color: var(--color-headings);
+  font-size: 2rem;
+}
+/* pseudo element to select placeholder text */
+::placeholder {
+  color: #cdcdd7;
+}
+
+/* media query for input field */
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
