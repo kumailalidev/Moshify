@@ -469,3 +469,24 @@ a {
     font-size: 1.6rem;
   }
 }
+
+/* Grids */
+.grid {
+  display: grid;
+}
+
+/* for tablet and mobile screens (> 768px) */
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    /* grid-template-columns: 1fr 1fr; Take all the available space, divide by 2 and give value to each column */
+    grid-template-columns: repeat(2, 1fr); /* same as above */
+  }
+}
+
+/* for larger screens (> 1024px) */
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    /* grid-template-columns: 1fr 1fr 1fr; Take all the available space, divide by 3 and give value to each column */
+    grid-template-columns: repeat(3, 1fr); /* same as above */
+  }
+}
