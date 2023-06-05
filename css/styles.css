@@ -190,9 +190,18 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 /* Icons variation */
 .icon--primary {
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
 }
 
 .icon-container {
@@ -204,6 +213,10 @@ a {
   display: inline-flex; /* span is an inline element, inline have not effect on CSS properties */
   justify-content: center; /* primary axis of flex */
   align-items: center; /* vertical axis of flex */
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 /* Buttons */
@@ -488,5 +501,39 @@ a {
   .grid--1x3 {
     /* grid-template-columns: 1fr 1fr 1fr; Take all the available space, divide by 3 and give value to each column */
     grid-template-columns: repeat(3, 1fr); /* same as above */
+  }
+}
+
+/* Testimonial */
+.testimonial {
+  padding: 3rem;
+}
+
+/* enabling relative positioning on image container */
+.testimonial__image {
+  position: relative;
+}
+
+/* targeting image that is directly inside container using > (direct child selector) */
+.testimonial__image > img {
+  width: 100%; /* 100% width of its container */
+}
+
+/* positioning icon using direct child selector */
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px; /* right offset of icon */
+}
+
+/* media query for tablets and larger screens */
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
   }
 }
