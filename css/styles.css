@@ -228,10 +228,19 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
+}
+
+/* size of icon inside a button */
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 /* Button variations */
@@ -317,7 +326,7 @@ a {
 .input-group .input {
   border: 0; /* make border 0 of input field inside div of class input-group */
   flex-grow: 1; /* input field takes all the available space */
-  padding: 1.5rem 1rem; /* reducing padding */
+  padding: 1.5rem 2rem; /* reducing padding */
 }
 
 .input-group .btn {
@@ -754,5 +763,34 @@ a {
   .hero__content {
     text-align: left;
     align-self: center; /* vertically align the contents of the grid item */
+  }
+}
+
+/* Domain Block */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem); /* height of each row */
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center; /* Horizontal alignment */
+  max-width: 700px; /* list will not grow above 700px */
+  margin: 0 auto;
+}
+
+/* Media query for domain block */
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(10rem, 1fr)
+    ); /* automatically create the no. of columns to fix the width, each column should be 100px*/
   }
 }
