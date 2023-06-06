@@ -1,3 +1,5 @@
+@import "./normalize.css";
+
 /* Using mobile first approach */
 /* Defining color palette variables using pseudo class selector 'root' */
 :root {
