@@ -367,12 +367,20 @@ a {
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background-color: #126de4;
+}
+
 /* rule for a secondary badge WITH a secondary card as a parent element */
 .card--secondary .badge--secondary {
   background-color: #02cdf1;
 }
 
 /* Plans */
+
+.plan {
+  transition: transform 0.2s ease-out;
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -401,6 +409,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 /* if we have element with a class plan--popular apply the following styles to element with class card__header (element with class card__header is child element) */
 .plan--popular .card__header {
   position: relative;
@@ -413,6 +425,14 @@ a {
   position: absolute; /* now we can make parent or container a relatively position element (i.e. element with .card__header)*/
   top: -6px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 /* media query for card component */
@@ -793,4 +813,14 @@ a {
       minmax(10rem, 1fr)
     ); /* automatically create the no. of columns to fix the width, each column should be 100px*/
   }
+}
+
+/* Plans Block */
+.block-plans .grid {
+  gap: 8rem 4rem; /* gap between each card: row and column */
+}
+
+.block-plans .card {
+  max-width: 500px; /* maximum width of each card */
+  margin: 0 auto;
 }
