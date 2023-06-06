@@ -824,3 +824,29 @@ a {
   max-width: 500px; /* maximum width of each card */
   margin: 0 auto;
 }
+
+/* Features */
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0; /* adding vertical margin */
+}
+.feature__heading {
+  margin: 1rem 0;
+}
+
+/* selecting first feature */
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  /* selecting all the even elements containing feature class */
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
