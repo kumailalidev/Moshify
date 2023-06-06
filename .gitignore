@@ -1,2 +1,10 @@
 # Notes file
 Notes.md
+
+# Folders
+node_modules/
+dist/
+.cache/
+
+# Parcel
+.htmlnanorc
